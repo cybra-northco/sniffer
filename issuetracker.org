@@ -1,0 +1,4 @@
+* DONE Use a smaller base image for sniffer
+* DONE Use a proper init
+* Interception of HTTP request & response headers, no body
+* Specialize on a specific application, e.g. CMS PODs
