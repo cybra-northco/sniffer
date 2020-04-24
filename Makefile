@@ -1,8 +1,11 @@
-build:
-	docker build -t docker.io/cybra/sniffer.north-pacific:0-alpha0 .
+all: sniffer
 
-push:
-	docker push docker.io/cybra/sniffer.north-pacific:0-alpha0
+sniffer:
+	docker build -t docker.io/cybra/sniffer.north-pacific:0-alpha1 .
+	docker push docker.io/cybra/sniffer.north-pacific:0-alpha1
 
-test:
-	docker run --rm -t -i docker.io/cybra/sniffer.north-pacific
+kube:
+	kubectl apply -f daemonset.yaml
+
+local:
+	docker run --rm -t -i docker.io/cybra/sniffer.north-pacific:0-alpha1
