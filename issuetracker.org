@@ -2,3 +2,5 @@
 * DONE Use a proper init
 * Interception of HTTP request & response headers, no body
 * Specialize on a specific application, e.g. CMS PODs
+* Parametrize makefile with a version of the image being built
+* Parametrize the daemonset's sniffer image
