@@ -1,8 +1,8 @@
 apiVersion: apps/v1
 kind: DaemonSet
 metadata:
-  name: sniffer.north-pacific
   namespace: kube-system
+  name: http.sniffer.north-pacific
   labels:
     k8s-app: sniffer
 spec:
@@ -18,7 +18,7 @@ spec:
       tolerations:
       containers:
       - name: tcpdump
-        image: docker.io/cybra/sniffer.north-pacific:0-alpha0
+        image: docker.io/cybra/sniffer-http.north-pacific:0-alpha1
         resources:
           limits:
             memory: 200Mi

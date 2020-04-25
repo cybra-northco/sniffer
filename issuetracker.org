@@ -4,3 +4,5 @@
 * Specialize on a specific application, e.g. CMS PODs
 * Parametrize makefile with a version of the image being built
 * Parametrize the daemonset's sniffer image
+* Parametrize the interface tcpdump is listening on (sniffer & http-sniffer)
+* Parametrize the namespace to be installed into
